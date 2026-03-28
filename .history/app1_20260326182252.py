@@ -1,0 +1,13 @@
+from flask import Flask
+
+app = Flask(__name__)
+app.config["DEBUG"] = True # modo de depuracion
+
+@app.route('/', methods=['GET'])
+def home():
+    return """
+    <h1>The Bridge Distant Reading Archive</h1>
+    <p>This site is a prototype API for distant reading of science fiction novels.</p>
+    """
+
+app.run()   
